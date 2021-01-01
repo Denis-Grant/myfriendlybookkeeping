@@ -1,0 +1,23 @@
+{
+  "name": "myfriendlybookeeping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denis-Grant/myfriendlybookkeeping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denis-Grant/myfriendlybookkeeping/issues"
+  },
+  "homepage": "https://github.com/Denis-Grant/myfriendlybookkeeping#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
