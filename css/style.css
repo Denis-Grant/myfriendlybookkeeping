@@ -15,7 +15,7 @@ body {
     color: inherit;
     text-decoration: none; }
   body section {
-    padding: 80px 0; }
+    padding: 50px 0; }
   body .green {
     color: #00CFCF; }
   body .hide {
@@ -25,7 +25,7 @@ body {
 header {
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0);
   height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 90%; }
   header nav {
@@ -43,7 +43,7 @@ header {
           display: flex;
           align-items: center; }
           header nav .navbar-wrapper .navbar .menu li {
-            padding: 5px 22px; }
+            padding: 5px 10px; }
             header nav .navbar-wrapper .navbar .menu li a {
               padding-bottom: 5px;
               color: #fff;
@@ -92,7 +92,14 @@ header {
       color: #fff;
       font-weight: 800;
       line-height: 5.3rem; }
+      header #cta .cta-wrapper span.green {
+        color: #2B8383; }
+      header #cta .cta-wrapper span.red {
+        color: #832B2B; }
       header #cta .cta-wrapper button {
+        margin-left: 66%;
+        min-width: 202px;
+        display: block;
         background-color: rgba(255, 255, 255, 0);
         border: 1px solid #fff;
         border-radius: 30px;
@@ -100,44 +107,42 @@ header {
         header #cta .cta-wrapper button a {
           display: block;
           font-size: 1.1rem;
-          font-weight: 100;
-          color: black;
+          font-weight: 300;
+          color: #2B8383;
           padding: 10px 15px; }
         header #cta .cta-wrapper button:hover {
           background-color: #fff;
           border: #fff; }
 
-#what-we-do .what-header {
-  margin: 0 auto;
-  width: 500px;
-  text-align: center; }
-  #what-we-do .what-header h5 {
-    font-size: 0.975rem;
-    color: #8a8a8a; }
-  #what-we-do .what-header h3 {
-    font-size: 1.875rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    word-spacing: 1px;
-    line-height: 30px;
-    color: #3b5998; }
-  #what-we-do .what-header i {
-    font-size: 1.5rem;
-    color: #8a8a8a; }
-  #what-we-do .what-header p {
-    font-size: 0.975rem;
-    color: #8a8a8a; }
-  #what-we-do .what-header * {
-    margin-bottom: 15px; }
-
-#what-we-do .grid-container {
-  width: 80%;
-  margin: 0 auto; }
+#what-we-do {
+  border-bottom: 15px solid #f9f9f9; }
+  #what-we-do .what-header {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center; }
+    #what-we-do .what-header h5 {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #what-we-do .what-header h3 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      word-spacing: 1px;
+      line-height: 30px;
+      color: #2B8383; }
+    #what-we-do .what-header i {
+      font-size: 1.5rem;
+      color: #8a8a8a; }
+    #what-we-do .what-header p {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #what-we-do .what-header * {
+      margin-bottom: 15px; }
   #what-we-do .grid-container .grid {
-    margin-top: 20px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px 60px; }
+    gap: 3px 5px; }
     #what-we-do .grid-container .grid .box {
       display: grid;
       grid-template-columns: 20% 80%; }
@@ -147,11 +152,11 @@ header {
           font-size: 3.4rem;
           color: #dbdbdb; }
       #what-we-do .grid-container .grid .box .description {
-        padding-left: 10px;
+        padding-left: 20px;
         padding-top: 12px; }
         #what-we-do .grid-container .grid .box .description h6 {
           font-size: 1.2rem;
-          color: #3b5998;
+          color: #2B8383;
           margin-bottom: 2px; }
         #what-we-do .grid-container .grid .box .description p {
           font-size: 1rem;
@@ -167,4 +172,69 @@ header {
           padding: 3px 12px;
           cursor: pointer;
           background: rgba(255, 255, 255, 0);
+          transition: background 300ms ease-in-out;
           border-radius: 30px; }
+          #what-we-do .grid-container .grid .box .description button:hover {
+            background: #7795BA5E;
+            color: #4c4c4c;
+            font-weight: bold; }
+
+#services {
+  height: 100vh;
+  background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white), url(../img/calculator.jpg) no-repeat;
+  clip-path: polygon(0% 0%, 100% 0, 100% 70%, 0% 100%, 0 100%, 0 0); }
+  #services .services-header {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center; }
+    #services .services-header h5 {
+      font-size: 0.975rem;
+      color: #fff; }
+    #services .services-header h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      word-spacing: 1px;
+      line-height: 30px;
+      color: #fff; }
+    #services .services-header i {
+      font-size: 1.5rem;
+      color: #fff; }
+    #services .services-header p {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #services .services-header * {
+      margin-bottom: 15px; }
+  #services .services-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 75%;
+    padding-bottom: 100px; }
+    #services .services-container .img-grid {
+      position: relative; }
+      #services .services-container .img-grid img {
+        width: 100%;
+        height: auto; }
+      #services .services-container .img-grid .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 1px;
+        background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white); }
+    #services .services-container .services-grid {
+      display: grid;
+      grid-template-columns: 5% 45% 5% 45%;
+      background: #fff;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 50px; }
+      #services .services-container .services-grid i {
+        font-size: 2rem;
+        color: #3b5998; }
+      #services .services-container .services-grid h5 {
+        font-size: 1.1rem;
+        padding-left: 10px;
+        font-weight: bold;
+        text-transform: uppercase; }

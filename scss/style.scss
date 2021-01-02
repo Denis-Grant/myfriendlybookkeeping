@@ -6,14 +6,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // border: 1px dotted yellow;
-}
+    // border: 1px dotted salmon;
+} 
 body {
     font-family: 'Open Sans', sans-serif;
     .container {
         margin: 0 auto;
-        width: 90%;
-    }
+        width: 90%; 
+    } 
     ul {
         list-style: none;
     }
@@ -22,7 +22,7 @@ body {
         text-decoration: none;
     }
     section {
-        padding: 80px 0;
+        padding: 50px 0;
     }
     .green {
         color: $turquoise;
@@ -37,7 +37,7 @@ header {
     clip-path: polygon(0% 0%,100% 0%, 100% 85%, 50% 100%,0% 85%, 0% 0);
     // clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.1)),url('../img/hero.jpg') no-repeat;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.1)),url('../img/hero.jpg') no-repeat;
     background-size: cover;
     background-position: 50% 90%;
 
@@ -56,7 +56,7 @@ header {
                         display: flex;
                         align-items: center;
                         li {
-                            padding: 5px 22px;
+                            padding: 5px 10px;
                             a {
                             padding-bottom: 5px;
                             color: #fff;
@@ -132,14 +132,17 @@ header {
             color: #fff;
             font-weight: 800;
             line-height: 5.3rem;
-            i {
-                // position: absolute;
-                // font-size: 2.2rem;
-                // left: 220px;
-                // top: 19px;
-                // color: $turquoise;
+            span.green {
+                color: $green;
             }
+            span.red {
+                color: $red;
+            }
+
             button {
+                margin-left: 66%;
+                min-width: 202px;
+                display: block;
                 background-color: rgba(255, 255, 255, 0);
                 border: 1px solid #fff;
                 border-radius: 30px;
@@ -149,8 +152,8 @@ header {
                 a {
                     display: block;
                     font-size: 1.1rem;
-                    font-weight: 100;
-                    color: black;
+                    font-weight: 300;
+                    color: $green;
                     padding: 10px 15px;
                 }
                 &:hover {
@@ -162,7 +165,11 @@ header {
         }
     }
 }
+
+// WHAT WE DO
 #what-we-do {
+    border-bottom: 15px solid $light-grey;
+
     .what-header {
         margin: 0 auto;
         width: 500px;
@@ -177,7 +184,7 @@ header {
             letter-spacing: -1px;
             word-spacing: 1px;
             line-height: 30px;
-            color: $blue;
+            color: $green;
         }
         i {
             font-size: 1.5rem;
@@ -192,20 +199,19 @@ header {
         }
     }
     .grid-container {
-        width: 80%;
-        margin: 0 auto;
+        // width: 80%;
+        // margin: 0 auto;
         .grid {
             // border: 1px dotted pink;
-            margin-top: 20px;
+            margin-top: 40px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3px 60px;
+            gap: 3px 5px;
             .box {
                 // border: 1px solid $black;
                 display: grid;
                 grid-template-columns: 20% 80%;
                 .number {
-                    // border: 1px  dotted red;
                     font-size: 3rem;
                     h5 {
                         font-size: 3.4rem;
@@ -213,11 +219,11 @@ header {
                     }
                 }
                 .description { 
-                    padding-left: 10px;
+                    padding-left: 20px;
                     padding-top: 12px;
                     h6 {
                         font-size: 1.2rem;
-                        color: $blue;
+                        color: $green;
                         margin-bottom: 2px;
                     }
                     p {
@@ -233,14 +239,110 @@ header {
                         font-weight: 300;
                         color: $black;
                         border: 1px solid $black;
-                        font-size: .9rem;
+                        font-size: .9rem; 
                         padding: 3px 12px;
                         cursor: pointer;
                         background: rgba(255,255,255,0);
+                        transition: background 300ms ease-in-out;
                         border-radius: 30px;
+                        &:hover {
+                            // background: darken(#ECF1E8, 3%);
+                            background: #7795BA5E;
+                            color: $black;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
         }
+    }
+} // What we do
+
+// SERVICES
+#services {
+    height: 100vh;
+    background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white),url(../img/calculator.jpg) no-repeat;
+    .services-header {
+        margin: 0 auto;
+        width: 500px;
+        text-align: center;
+        h5 {
+            font-size: 0.975rem;
+            color: #fff;
+        }
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            word-spacing: 1px;
+            line-height: 30px;
+            color: #fff;
+        }
+        i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        p {
+            font-size: 0.975rem;
+            color: $grey;
+        }
+        & * {
+            margin-bottom: 15px;
+        }
+    }
+
+    // background: darken($light-grey, 3%);
+
+
+    // clip-path: polygon(0% 0%,100% 15%, 100% 100%, 0% 100%,0% 0%);
+    clip-path: polygon(0% 0%,100% 0, 100% 70%, 0% 100%, 0 100%,0 0);
+    // clip-path: polygon(0% 0%,100% 0%, 100% 85%, 50% 100%,0% 85%, 0% 0);
+
+
+    .services-container {
+        // border: 1px dotted $blue;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+
+        grid-template-columns: 30% 75%;
+        padding-bottom: 100px;
+        // padding-bottom: 70px;
+        .img-grid {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 1px;
+                background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white);
+                // background: linear-gradient(to right top, #698474, #698474a6, #69847478, #69847400);        
+            }
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: 5% 45% 5% 45%;
+            background: #fff;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 50px;
+            i {
+                font-size: 2rem;
+                color: $blue;
+            }
+            h5 {
+                font-size: 1.1rem;
+                padding-left: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+        
     }
 }
