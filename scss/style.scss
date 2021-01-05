@@ -341,7 +341,7 @@ header {
             // color: #2b5783;
         }
         i {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: $black;
         }
         p {
@@ -391,6 +391,9 @@ header {
                     text-transform: uppercase;
                     padding-bottom: 3px;
                 }
+            .span-1 {
+                
+            }
             }
 
         }
@@ -521,7 +524,7 @@ header {
             // color: #2b5783;
         }
         i {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: $white;
         }
         p {
@@ -531,6 +534,48 @@ header {
         & * {
             margin-bottom: 15px;
       
+        }
+    }
+    .quotes-grid {
+        display: grid;
+        margin-top: 110px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        gap: 30px 310px;
+
+        .box {
+
+            padding: 15px;
+            background-color: $blue;
+            color: $white;
+            border-radius: 10px 10px 30px 10px;
+            font-weight: 300;
+            box-shadow: 7px 6px 13px 0px rgba(59,89,152,0.75);                font-size: 1.250rem;
+            }
+            .details {
+                padding-top: 8px;
+                margin-top: 8px;
+                border-top: 1px solid #f9f9f91a;
+                .name {
+                        color: #ffcc00;
+                        font-weight: bold;
+                }
+                .role {
+                    font-size: .8rem;
+                }
+            }
+        }
+        .span-1 {
+            grid-column: 2 / span 1;
+        }
+    }
+    .speech {
+        text-align: center;
+        padding-top: 120px;
+        // border-bottom: 4px solid $green;
+        i {
+            font-size: 300%;
+            color: $white;
         }
     }
 }

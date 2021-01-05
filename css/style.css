@@ -232,7 +232,7 @@ header {
       line-height: 30px;
       color: #3b5998; }
     #services .services-header i {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #4c4c4c; }
     #services .services-header p {
       font-size: 0.975rem;
@@ -313,10 +313,42 @@ header {
       line-height: 30px;
       color: #fff; }
     #testimonials .testimonial-header i {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #f9f9f9; }
     #testimonials .testimonial-header p {
       font-size: 0.975rem;
       color: #8a8a8a; }
     #testimonials .testimonial-header * {
       margin-bottom: 15px; }
+  #testimonials .quotes-grid {
+    display: grid;
+    margin-top: 110px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    gap: 30px 310px; }
+    #testimonials .quotes-grid .box {
+      padding: 15px;
+      background-color: #3b5998;
+      color: #f9f9f9;
+      border-radius: 10px 10px 30px 10px;
+      font-weight: 300;
+      box-shadow: 5px 4px 13px 0px rgba(59, 89, 152, 0.75); }
+      #testimonials .quotes-grid .box h4 {
+        font-size: 1.250rem; }
+      #testimonials .quotes-grid .box .details {
+        padding-top: 8px;
+        margin-top: 8px;
+        border-top: 1px solid #f9f9f91a; }
+        #testimonials .quotes-grid .box .details .name {
+          color: #ffcc00;
+          font-weight: bold; }
+        #testimonials .quotes-grid .box .details .role {
+          font-size: .8rem; }
+    #testimonials .quotes-grid .span-1 {
+      grid-column: 2 / span 1; }
+  #testimonials .speech {
+    text-align: center;
+    padding-top: 120px; }
+    #testimonials .speech i {
+      font-size: 300%;
+      color: #f9f9f9; }
