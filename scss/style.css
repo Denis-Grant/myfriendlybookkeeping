@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +9,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
 }
 
 body .container {
@@ -38,12 +40,30 @@ body .hide {
   transition: display 1s ease-in-out;
 }
 
+body #no-flex {
+  display: block;
+}
+
+body .mt-80 {
+  margin-top: 80px;
+}
+
+body .align-self-c {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+body .gap {
+  height: 600px;
+}
+
 header {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0);
           clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0);
   height: 90vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1))), url("../img/hero.jpg") no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 90%;
 }
@@ -69,6 +89,25 @@ header nav .navbar-wrapper .navbar {
           justify-content: space-between;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   padding-right: 10px;
+}
+
+header nav .navbar-wrapper .navbar .brand .brand-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-width: 200px;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-sm {
+  width: 45px;
+  height: auto;
+  padding-right: 1px;
 }
 
 header nav .navbar-wrapper .navbar .menu {
@@ -99,13 +138,6 @@ header nav .navbar-wrapper .navbar .menu li a.active {
 
 header nav .navbar-wrapper .navbar .menu li a:hover {
   border-bottom: 5px solid #00FFFF;
-}
-
-header nav .navbar-wrapper .navbar img {
-  width: 100%;
-  min-width: 200px;
-  height: 100%;
-  padding: 1rem 0;
 }
 
 @media screen and (max-width: 1210px) {
@@ -175,8 +207,8 @@ header #cta .cta-wrapper span.green {
   color: #2B8383;
 }
 
-header #cta .cta-wrapper span.red {
-  color: #832b2b;
+header #cta .cta-wrapper span {
+  color: #00CFCF;
 }
 
 header #cta .cta-wrapper button {
@@ -184,7 +216,7 @@ header #cta .cta-wrapper button {
   min-width: 202px;
   display: block;
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 30px;
   -webkit-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
@@ -194,13 +226,20 @@ header #cta .cta-wrapper button a {
   display: block;
   font-size: 1.1rem;
   font-weight: 300;
-  color: #2B8383;
+  color: #f9f9f9;
   padding: 10px 15px;
+  border: 1px solid #00CFCF;
+  border-radius: 30px;
 }
 
-header #cta .cta-wrapper button:hover {
-  background-color: #fff;
-  border: #fff;
+header #cta .cta-wrapper button a:hover {
+  background-color: #f9f9f9;
+  border-radius: 30px;
+  color: #009595;
+}
+
+#what-we-do {
+  border-bottom: 15px solid #f6f6f6;
 }
 
 #what-we-do .what-header {
@@ -229,6 +268,7 @@ header #cta .cta-wrapper button:hover {
 }
 
 #what-we-do .what-header p {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.975rem;
   color: #8a8a8a;
 }
@@ -263,25 +303,37 @@ header #cta .cta-wrapper button:hover {
 }
 
 #what-we-do .grid-container .grid .box .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 20px;
   padding-top: 12px;
   margin-bottom: 40px;
 }
 
 #what-we-do .grid-container .grid .box .description h6 {
-  font-size: 1.2rem;
+  font-size: 1.250rem;
   color: #2B8383;
   margin-bottom: 2px;
 }
 
 #what-we-do .grid-container .grid .box .description p {
-  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
   font-weight: 300;
   max-width: 300px;
 }
 
 #what-we-do .grid-container .grid .box .description button {
   font-family: 'Open Sans', sans-serif;
+  max-width: 60px;
   margin-top: 10px;
   font-weight: 300;
   color: #4c4c4c;
@@ -303,9 +355,11 @@ header #cta .cta-wrapper button:hover {
 
 #services {
   height: 100vh;
-  background: #f9f9f9;
-  -webkit-clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%, 0 0);
-          clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%, 0 0);
+}
+
+#services .container {
+  position: relative;
+  z-index: 20;
 }
 
 #services .services-header {
@@ -342,60 +396,54 @@ header #cta .cta-wrapper button:hover {
   margin-bottom: 15px;
 }
 
-#services .services-container {
-  width: 100%;
+#services .grid-container {
+  width: 90%;
   margin: 0 auto;
+  margin-top: 80px;
+}
+
+#services .grid-container .services-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 75%;
-      grid-template-columns: 30% 75%;
-  padding-bottom: 100px;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#services .services-container .img-grid {
-  position: relative;
-}
-
-#services .services-container .img-grid img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#services .services-container .img-grid .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  background: -webkit-gradient(linear, left bottom, right top, from(#3b5998), color-stop(#3b5998c2), color-stop(#3b59988a), to(white));
-  background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white);
-}
-
-#services .services-container .services-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 5% 45% 5% 45%;
-      grid-template-columns: 5% 45% 5% 45%;
-  background: #fff;
+#services .grid-container .services-grid .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
 }
 
-#services .services-container .services-grid i {
-  font-size: 2rem;
+#services .grid-container .services-grid .box .text {
+  color: #4c4c4c;
+}
+
+#services .grid-container .services-grid .box .border {
+  border: 1px dotted #3b5998;
+}
+
+#services .grid-container .services-grid .box i {
+  font-size: 3rem;
+  padding-right: 10px;
   color: #3b5998;
 }
 
-#services .services-container .services-grid h5 {
-  font-size: 1.1rem;
-  padding-left: 10px;
+#services .grid-container .services-grid .box h5 {
+  font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */
