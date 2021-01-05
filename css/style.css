@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9; }
   body .container {
     margin: 0 auto;
     width: 90%; }
@@ -21,11 +23,17 @@ body {
   body .hide {
     display: none;
     transition: display 1s ease-in-out; }
+  body #no-flex {
+    display: block; }
+  body .mt-80 {
+    margin-top: 80px; }
+  body .gap {
+    height: 600px; }
 
 header {
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0);
   height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 90%; }
   header nav {
@@ -89,33 +97,36 @@ header {
     header #cta .cta-wrapper {
       position: relative;
       font-size: 2rem;
-      color: #fff;
+      color: #f9f9f9;
       font-weight: 800;
       line-height: 5.3rem; }
       header #cta .cta-wrapper span.green {
         color: #2B8383; }
-      header #cta .cta-wrapper span.red {
-        color: #832B2B; }
+      header #cta .cta-wrapper span {
+        color: #00CFCF; }
       header #cta .cta-wrapper button {
         margin-left: 66%;
         min-width: 202px;
         display: block;
         background-color: rgba(255, 255, 255, 0);
-        border: 1px solid #fff;
+        border: 2px solid #fff;
         border-radius: 30px;
         transition: background-color 500ms ease-in-out; }
         header #cta .cta-wrapper button a {
           display: block;
           font-size: 1.1rem;
           font-weight: 300;
-          color: #2B8383;
-          padding: 10px 15px; }
-        header #cta .cta-wrapper button:hover {
+          color: #f9f9f9;
+          padding: 10px 15px;
+          border: 1px solid #3b5998;
+          border-radius: 30px; }
+        header #cta .cta-wrapper button a:hover {
           background-color: #fff;
-          border: #fff; }
+          border-radius: 30px;
+          color: #3b5998; }
 
 #what-we-do {
-  border-bottom: 15px solid #f9f9f9; }
+  border-bottom: 15px solid #f6f6f6; }
   #what-we-do .what-header {
     margin: 0 auto;
     width: 500px;
@@ -129,17 +140,18 @@ header {
       letter-spacing: -1px;
       word-spacing: 1px;
       line-height: 30px;
-      color: #2B8383; }
+      color: #4c4c4c; }
     #what-we-do .what-header i {
       font-size: 1.5rem;
       color: #8a8a8a; }
     #what-we-do .what-header p {
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.975rem;
       color: #8a8a8a; }
     #what-we-do .what-header * {
-      margin-bottom: 15px; }
+      margin-bottom: 25px; }
   #what-we-do .grid-container .grid {
-    margin-top: 40px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3px 5px; }
@@ -152,18 +164,24 @@ header {
           font-size: 3.4rem;
           color: #dbdbdb; }
       #what-we-do .grid-container .grid .box .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         padding-left: 20px;
-        padding-top: 12px; }
+        padding-top: 12px;
+        margin-bottom: 40px; }
         #what-we-do .grid-container .grid .box .description h6 {
-          font-size: 1.2rem;
+          font-size: 1.250rem;
           color: #2B8383;
           margin-bottom: 2px; }
         #what-we-do .grid-container .grid .box .description p {
-          font-size: 1rem;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.2rem;
           font-weight: 300;
           max-width: 300px; }
         #what-we-do .grid-container .grid .box .description button {
           font-family: 'Open Sans', sans-serif;
+          max-width: 60px;
           margin-top: 10px;
           font-weight: 300;
           color: #4c4c4c;
@@ -175,66 +193,91 @@ header {
           transition: background 300ms ease-in-out;
           border-radius: 30px; }
           #what-we-do .grid-container .grid .box .description button:hover {
-            background: #7795BA5E;
+            background: #f9f9f9;
             color: #4c4c4c;
-            font-weight: bold; }
+            font-weight: 400; }
 
 #services {
+  position: relative;
   height: 100vh;
-  background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white), url(../img/calculator.jpg) no-repeat;
-  clip-path: polygon(0% 0%, 100% 0, 100% 70%, 0% 100%, 0 100%, 0 0); }
+  overflow: hidden;
+  z-index: 10; }
+  #services .container {
+    position: relative;
+    z-index: 20; }
   #services .services-header {
     margin: 0 auto;
     width: 500px;
     text-align: center; }
     #services .services-header h5 {
       font-size: 0.975rem;
-      color: #fff; }
+      color: #4c4c4c; }
     #services .services-header h3 {
       font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -1px;
       word-spacing: 1px;
       line-height: 30px;
-      color: #fff; }
+      color: #2b5783; }
     #services .services-header i {
       font-size: 1.5rem;
-      color: #fff; }
+      color: #4c4c4c; }
     #services .services-header p {
       font-size: 0.975rem;
       color: #8a8a8a; }
     #services .services-header * {
       margin-bottom: 15px; }
-  #services .services-container {
-    width: 100%;
+  #services .grid-container {
+    width: 90%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 30% 75%;
-    padding-bottom: 100px; }
-    #services .services-container .img-grid {
-      position: relative; }
-      #services .services-container .img-grid img {
-        width: 100%;
-        height: auto; }
-      #services .services-container .img-grid .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 1px;
-        background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white); }
-    #services .services-container .services-grid {
+    margin-top: 80px; }
+    #services .grid-container .services-grid {
       display: grid;
-      grid-template-columns: 5% 45% 5% 45%;
-      background: #fff;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 50px; }
-      #services .services-container .services-grid i {
-        font-size: 2rem;
-        color: #3b5998; }
-      #services .services-container .services-grid h5 {
-        font-size: 1.1rem;
-        padding-left: 10px;
-        font-weight: bold;
-        text-transform: uppercase; }
+      grid-template-columns: 30% 30% 30%;
+      gap: 10px;
+      justify-content: center; }
+      #services .grid-container .services-grid .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px; }
+        #services .grid-container .services-grid .box .text {
+          color: #4c4c4c; }
+        #services .grid-container .services-grid .box .border {
+          border: 1px dotted #3b5998; }
+        #services .grid-container .services-grid .box i {
+          font-size: 3rem;
+          padding-right: 10px;
+          color: #3b5998; }
+        #services .grid-container .services-grid .box h5 {
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding-bottom: 3px; }
+  #services .img-grid {
+    position: relative;
+    clip-path: circle(40% at 50% 50%); }
+    #services .img-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    #services .img-grid .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 1px;
+      background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white);
+      clip-path: circle(40% at 50% 50%); }
+
+#services:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+  transform: scaleX(1.5);
+  background: #fff;
+  z-index: 0; }
