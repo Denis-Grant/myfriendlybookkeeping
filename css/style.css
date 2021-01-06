@@ -215,7 +215,6 @@ header {
 
 #services {
   height: 100vh;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
   background-color: #fff; }
   #services .container {
     position: relative;
@@ -297,6 +296,7 @@ header {
         background: #3b5998; }
 
 #testimonials {
+  margin-top: -100px;
   height: 100vh;
   background-color: #2B8383;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%, 0 0); }
@@ -356,7 +356,7 @@ header {
 
 #about-us {
   height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/london.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/london.jpg") no-repeat;
   border-bottom: 15px solid #3b5998;
   background-size: cover;
   background-position: center;
@@ -424,138 +424,147 @@ header {
       font-size: 300%;
       color: #f9f9f9; }
 
-#contact-us {
-  background: url(../img/bg-white-img.jpg) no-repeat; }
-  #contact-us .contact-container {
-    width: 80%;
-    margin: 0 auto; }
-    #contact-us .contact-container .contact-header {
-      padding-top: 20px;
-      margin: 0 auto;
-      width: 500px;
+#contact-us .contact-container {
+  width: 80%;
+  margin: 0 auto; }
+  #contact-us .contact-container .contact-header {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center; }
+    #contact-us .contact-container .contact-header h5 {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #contact-us .contact-container .contact-header h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      word-spacing: 1px;
+      line-height: 30px;
+      color: #3b5998; }
+    #contact-us .contact-container .contact-header i {
+      font-size: 2rem;
+      color: #4c4c4c; }
+    #contact-us .contact-container .contact-header p {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #contact-us .contact-container .contact-header * {
+      margin-bottom: 15px; }
+  #contact-us .contact-container .contact-wrapper {
+    box-shadow: 5px 11px 14px -1px rgba(138, 138, 138, 0.35);
+    margin-top: 100px;
+    background: #ffffff61;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    border: 1px solid #4c4c4c24;
+    padding: 10px; }
+  #contact-us .contact-container .col-1 {
+    padding: 40px;
+    margin: 10px 0; }
+    #contact-us .contact-container .col-1 .inner-box {
       text-align: center; }
-      #contact-us .contact-container .contact-header h5 {
-        font-size: 0.975rem;
-        color: #8a8a8a; }
-      #contact-us .contact-container .contact-header h3 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        letter-spacing: -1px;
-        word-spacing: 1px;
-        line-height: 30px;
+      #contact-us .contact-container .col-1 .inner-box h2 {
         color: #3b5998; }
-      #contact-us .contact-container .contact-header i {
-        font-size: 2rem;
-        color: #4c4c4c; }
-      #contact-us .contact-container .contact-header p {
-        font-size: 0.975rem;
-        color: #8a8a8a; }
-      #contact-us .contact-container .contact-header * {
-        margin-bottom: 15px; }
-    #contact-us .contact-container .contact-wrapper {
-      box-shadow: 5px 11px 14px -1px rgba(138, 138, 138, 0.35);
-      margin-top: 100px;
-      background: #ffffff61;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-radius: 20px;
-      border: 1px solid #4c4c4c24;
-      padding: 10px; }
-    #contact-us .contact-container .col-1 {
-      padding: 40px;
-      margin: 10px 0; }
-      #contact-us .contact-container .col-1 .inner-box {
-        text-align: center;
+      #contact-us .contact-container .col-1 .inner-box .kp-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: space-between; }
-        #contact-us .contact-container .col-1 .inner-box h2 {
-          color: #3b5998; }
-        #contact-us .contact-container .col-1 .inner-box i {
+        align-items: center; }
+        #contact-us .contact-container .col-1 .inner-box .kp-wrapper img {
           display: block;
-          font-size: 3rem;
-          color: #3b5998;
-          text-align: center; }
-        #contact-us .contact-container .col-1 .inner-box h3 {
-          font-weight: bold;
-          color: #4c4c4c;
-          padding: 20px 0;
-          text-transform: uppercase; }
-        #contact-us .contact-container .col-1 .inner-box img {
-          margin: 0 auto;
-          display: block;
-          max-width: 200px;
+          max-width: 90px;
           height: auto;
-          opacity: .09;
-          border-radius: 100%;
-          padding-bottom: 30px; }
-      #contact-us .contact-container .col-1 .details {
-        margin-top: 100px;
-        text-align: center;
+          opacity: .60;
+          margin-top: 20px; }
+        #contact-us .contact-container .col-1 .inner-box .kp-wrapper h6 {
+          font-size: 16px;
+          margin-bottom: 15px; }
+      #contact-us .contact-container .col-1 .inner-box i {
+        margin-top: 80px;
+        display: block;
+        font-size: 3rem;
+        color: #3b5998;
+        text-align: center; }
+      #contact-us .contact-container .col-1 .inner-box h3 {
+        font-weight: bold;
+        color: #3b5998;
+        padding: 20px 0;
+        text-transform: uppercase; }
+    #contact-us .contact-container .col-1 .details {
+      margin-top: 80px;
+      text-align: center;
+      color: #4c4c4c; }
+      #contact-us .contact-container .col-1 .details span {
+        color: #3b5998;
+        font-weight: bold;
+        font-size: 1.7rem; }
+      #contact-us .contact-container .col-1 .details h3 {
+        padding: 6px 0;
+        font-weight: bold; }
+  #contact-us .contact-container .col-2 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px;
+    border-left: 1px solid #4c4c4c1c; }
+    #contact-us .contact-container .col-2 h2 {
+      font-family: 'Open Sans', sans-serif;
+      color: #2B8383;
+      text-align: center;
+      margin: 10px 0;
+      font-weight: bold;
+      padding-bottom: 10px; }
+    #contact-us .contact-container .col-2 .form {
+      color: #3b5998;
+      font-size: 1rem;
+      display: grid;
+      grid-template-columns: 100%; }
+      #contact-us .contact-container .col-2 .form label {
+        padding: 3px 0;
+        font-weight: 300;
         color: #4c4c4c; }
-        #contact-us .contact-container .col-1 .details span {
-          color: #3b5998;
-          font-weight: bold;
-          font-size: 1.7rem; }
-        #contact-us .contact-container .col-1 .details h3 {
-          padding: 6px 0;
-          font-weight: bold; }
-    #contact-us .contact-container .col-2 {
-      font-family: 'Montserrat', sans-serif;
-      padding: 40px;
-      border-left: 1px solid #4c4c4c1c; }
-      #contact-us .contact-container .col-2 h2 {
+      #contact-us .contact-container .col-2 .form input, #contact-us .contact-container .col-2 .form select {
+        background-color: #fff0;
+        height: 35px;
+        border-bottom: 1px solid #3b59982b;
+        border-top: inherit;
+        border-left: inherit;
+        border-right: inherit;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        padding-bottom: 4px;
+        color: #2B8383;
+        font-weight: 100;
+        outline: none;
+        padding: 3px; }
+      #contact-us .contact-container .col-2 .form textarea {
+        background-color: #fff0;
+        border-bottom: 1px solid #3b59982b;
+        border-top: inherit;
+        border-left: inherit;
+        border-right: inherit;
+        font-size: 1rem;
         font-family: 'Open Sans', sans-serif;
         color: #2B8383;
-        text-align: center;
-        margin: 10px 0;
-        font-weight: bold;
-        padding-bottom: 10px; }
-      #contact-us .contact-container .col-2 .form {
-        color: #3b5998;
+        font-weight: 100;
+        padding: 3px;
+        margin-bottom: 10px; }
+      #contact-us .contact-container .col-2 .form button {
+        cursor: pointer;
+        font-weight: 100;
+        padding: 10px;
+        background-color: #2B8383;
+        transition: background-color 300ms ease-in-out;
+        color: #fff;
         font-size: 1rem;
-        display: grid;
-        grid-template-columns: 100%; }
-        #contact-us .contact-container .col-2 .form label {
-          padding: 3px 0;
-          font-weight: 300;
-          color: #4c4c4c; }
-        #contact-us .contact-container .col-2 .form input, #contact-us .contact-container .col-2 .form select {
-          background-color: #fff0;
-          height: 35px;
-          border-bottom: 1px solid #3b59982b;
-          border-top: inherit;
-          border-left: inherit;
-          border-right: inherit;
-          margin-bottom: 20px;
-          font-size: 1.3rem;
-          padding-bottom: 4px;
-          color: #2B8383;
-          font-weight: 100;
-          outline: none;
-          padding: 3px; }
-        #contact-us .contact-container .col-2 .form textarea {
-          background-color: #fff0;
-          border-bottom: 1px solid #3b59982b;
-          border-top: inherit;
-          border-left: inherit;
-          border-right: inherit;
-          font-size: 1rem;
-          font-family: 'Open Sans', sans-serif;
-          color: #2B8383;
-          font-weight: 100;
-          padding: 3px;
-          margin-bottom: 10px; }
-        #contact-us .contact-container .col-2 .form button {
-          cursor: pointer;
-          font-weight: 100;
-          padding: 10px;
-          background-color: #2B8383;
-          transition: background-color 300ms ease-in-out;
-          color: #fff;
-          font-size: 1rem;
-          border: none;
-          margin: 15px 0;
-          border-radius: 4px; }
-          #contact-us .contact-container .col-2 .form button:hover {
-            background-color: #257070; }
+        border: none;
+        margin: 15px 0;
+        border-radius: 4px; }
+        #contact-us .contact-container .col-2 .form button:hover {
+          background-color: #257070; }
+
+footer {
+  color: #f9f9f9;
+  margin-top: -10px;
+  background-color: #2B8383; }
+  footer img {
+    max-width: 190px;
+    height: auto; }

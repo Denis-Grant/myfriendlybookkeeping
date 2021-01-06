@@ -318,7 +318,7 @@ header {
 #services {
     // position: relative;
     height: 100vh;
-    clip-path: polygon(0 0,100% 0, 100% 90%, 0 100%, 0 0);
+    // clip-path: polygon(0 0,100% 0, 100% 90%, 0 100%, 0 0);
     background-color: #fff;
     // overflow: hidden;
     // z-index: 10;
@@ -506,6 +506,7 @@ header {
 //     z-index: 0;
 // }
 #testimonials {
+    margin-top: -100px;
     height: 100vh;
     background-color: $green;
     clip-path:polygon(0 0, 100% 10%,100% 100%, 0 100%, 0 0);
@@ -587,7 +588,7 @@ header {
 
 #about-us {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('../img/london.jpg') no-repeat;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('../img/london.jpg') no-repeat;
     // linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.5)),
     border-bottom: 15px solid $blue;
     // margin-bottom: 200px;
@@ -686,7 +687,7 @@ header {
 }
 
 #contact-us {
-        background: url(../img/bg-white-img.jpg) no-repeat;
+        // background: url(../img/bg-white-img.jpg) no-repeat;
         .contact-container {
             width: 80%;
             margin: 0 auto;
@@ -736,18 +737,35 @@ header {
           .col-1 {
                   padding: 40px;
                   margin: 10px 0;
-                  // display: flex;
-                  // justify-content: flex-end;
                   .inner-box {
                       text-align: center;
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: space-between;
+                    //   display: flex;
+                    //   flex-direction: column;
+                    //   justify-content: space-between;
                       h2 {
                           color: $blue;
                           // text-decoration: underline;
                       }
+                      .kp-wrapper {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        //   display: flex;
+                        //   align-items: center;
+                          img {
+                              display: block;
+                              max-width: 90px;
+                              height: auto;
+                              opacity: .60;
+                              margin-top: 20px;
+                          }
+                          h6 {
+                              font-size: 16px;
+                              margin-bottom: 15px;
+                          }
+                      }
                       i {
+                          margin-top: 80px;
                           display: block;
                           font-size: 3rem;
                           color:$blue;
@@ -757,23 +775,14 @@ header {
                       h3 {
                           // font-family: 'Montserrat', sans-serif;
                           font-weight: bold;
-                          color: $black;
+                          color: $blue;
                           padding: 20px 0;
                           text-transform: uppercase;
                       }
-                      img {
-                          margin: 0 auto;
-                          display: block;
-                          max-width: 200px;
-                          height: auto;
-                          opacity: .09;
-                          // border-radius: 0 0 80px 80px;
-                          border-radius: 100%;
-                          padding-bottom: 30px;
-                      }
+                     
                   }
                   .details {
-                      margin-top: 100px;
+                      margin-top: 80px;
                       text-align: center;
                       // justify-content: space-between;
                       color: $black;
@@ -862,6 +871,16 @@ header {
               }
           }
         }
+}
+
+footer {
+    color: $white;
+    margin-top: -10px;
+    background-color: $green;
+    img {
+        max-width: 190px;
+        height: auto;
+    }
 }
 
 * {
