@@ -11,6 +11,8 @@ const excerpt02 = document.querySelector('.excerpt-02');
 const excerpt03 = document.querySelector('.excerpt-03');
 const description = document.querySelectorAll('.box .description');
 
+const gridHeaders = document.querySelector('.about-grid');
+const aboutParas = document.querySelectorAll('.about-grid p');
 
 function removeFlex(){
     console.log('IN')
@@ -51,5 +53,44 @@ gridContainer.addEventListener(('click'), (e)=>{
     para03.classList.toggle('hide');
     excerpt03.innerHTML.length > 1 ? excerpt03.innerHTML = "" :
         excerpt03.innerHTML = ".........";
+    }
+});
+// console.log(gridHeaders)
+function clearAll(){
+
+    aboutParas.forEach((el)=>{
+        el.classList.add('hidden');
+    });
+
+    for (let i = 0; i < 4 ; i++){
+        gridHeaders.children[i].classList.remove('active')
+    }
+
+}
+gridHeaders.addEventListener('click',(e)=>{
+    
+    console.log(e.target.id)
+    if (e.target.id === 'h-1'){
+        clearAll();
+        aboutParas[0].classList.remove('hidden');
+        gridHeaders.children[0].classList.add('active');
+    }
+    if (e.target.id === 'h-2'){
+        clearAll();
+        aboutParas[1].classList.remove('hidden');
+        gridHeaders.children[1].classList.add('active');
+    }
+    if (e.target.id === 'h-3'){
+        clearAll();
+        aboutParas[2].classList.remove('hidden');
+        gridHeaders.children[2].classList.add('active');
+    }
+    if (e.target.id === 'h-4'){
+        clearAll();
+        // aboutParas[2].classList.remove('hidden');
+        aboutParas.forEach((el)=>{
+            el.classList.remove('hidden');
+        });
+        gridHeaders.children[3].classList.add('active');
     }
 });

@@ -34,11 +34,14 @@ body {
     background-color: #2B8383; }
   body .right {
     margin-left: auto; }
+  body .hidden {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out; }
 
 header {
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0);
   height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("../img/hero.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 90%; }
   header nav {
@@ -153,9 +156,9 @@ header {
       letter-spacing: -1px;
       word-spacing: 1px;
       line-height: 30px;
-      color: #4c4c4c; }
+      color: #2B8383; }
     #what-we-do .what-header i {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       color: #8a8a8a; }
     #what-we-do .what-header p {
       font-family: 'Montserrat', sans-serif;
@@ -252,7 +255,7 @@ header {
       #services .grid-container .services-grid .box {
         display: flex;
         align-items: center;
-        margin-bottom: 20px; }
+        margin-bottom: 40px; }
         #services .grid-container .services-grid .box .text {
           color: #4c4c4c; }
         #services .grid-container .services-grid .box .border {
@@ -332,23 +335,197 @@ header {
       color: #f9f9f9;
       border-radius: 10px 10px 30px 10px;
       font-weight: 300;
-      box-shadow: 5px 4px 13px 0px rgba(59, 89, 152, 0.75); }
-      #testimonials .quotes-grid .box h4 {
-        font-size: 1.250rem; }
-      #testimonials .quotes-grid .box .details {
-        padding-top: 8px;
-        margin-top: 8px;
-        border-top: 1px solid #f9f9f91a; }
-        #testimonials .quotes-grid .box .details .name {
-          color: #ffcc00;
-          font-weight: bold; }
-        #testimonials .quotes-grid .box .details .role {
-          font-size: .8rem; }
-    #testimonials .quotes-grid .span-1 {
-      grid-column: 2 / span 1; }
+      box-shadow: 7px 6px 13px 0px rgba(59, 89, 152, 0.75); }
+    #testimonials .quotes-grid .details {
+      padding-top: 8px;
+      margin-top: 8px;
+      border-top: 1px solid #f9f9f91a; }
+      #testimonials .quotes-grid .details .name {
+        color: #ffcc00;
+        font-weight: bold; }
+      #testimonials .quotes-grid .details .role {
+        font-size: .8rem; }
+  #testimonials .span-1 {
+    grid-column: 2 / span 1; }
   #testimonials .speech {
     text-align: center;
     padding-top: 120px; }
     #testimonials .speech i {
       font-size: 300%;
       color: #f9f9f9; }
+
+#about-us {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/london.jpg") no-repeat;
+  border-bottom: 15px solid #3b5998;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  #about-us .about-header {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center; }
+    #about-us .about-header h5 {
+      font-size: 0.975rem;
+      color: #f9f9f9; }
+    #about-us .about-header h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      word-spacing: 1px;
+      line-height: 30px;
+      color: #fff; }
+    #about-us .about-header i {
+      font-size: 2rem;
+      color: #f9f9f9; }
+    #about-us .about-header p {
+      font-size: 0.975rem;
+      color: #8a8a8a; }
+    #about-us .about-header * {
+      margin-bottom: 15px; }
+  #about-us .container-grid {
+    width: 80%;
+    margin: 0 auto; }
+    #about-us .container-grid .about-grid {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 32% 32% 32% 4%;
+      align-items: start;
+      gap: 0 5px;
+      color: #f9f9f9; }
+      #about-us .container-grid .about-grid h4 {
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 1.250rem;
+        border-bottom: 4px solid #ffcc0059;
+        padding-bottom: 2px;
+        text-align: center;
+        transition: border-bottom, background-color 500ms ease; }
+        #about-us .container-grid .about-grid h4.active {
+          border-bottom: 3px solid #ffcc00;
+          color: #fff;
+          font-weight: normal; }
+        #about-us .container-grid .about-grid h4:hover {
+          border-bottom-color: #ffcc00; }
+      #about-us .container-grid .about-grid p {
+        color: #f9f9f9;
+        padding: 10px 3px 3px 3px;
+        line-height: 25px;
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #00000024;
+        display: inline; }
+  #about-us .speech {
+    text-align: center;
+    padding-top: 90px; }
+    #about-us .speech i {
+      font-size: 300%;
+      color: #f9f9f9; }
+
+#contact-us {
+  background: url(../img/bg-white-img.jpg) no-repeat; }
+  #contact-us .contact-container {
+    width: 70%;
+    margin: 0 auto; }
+    #contact-us .contact-container .contact-header {
+      padding-top: 20px;
+      margin: 0 auto;
+      width: 500px;
+      text-align: center; }
+      #contact-us .contact-container .contact-header h5 {
+        font-size: 0.975rem;
+        color: #8a8a8a; }
+      #contact-us .contact-container .contact-header h3 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        word-spacing: 1px;
+        line-height: 30px;
+        color: #3b5998; }
+      #contact-us .contact-container .contact-header i {
+        font-size: 2rem;
+        color: #4c4c4c; }
+      #contact-us .contact-container .contact-header p {
+        font-size: 0.975rem;
+        color: #8a8a8a; }
+      #contact-us .contact-container .contact-header * {
+        margin-bottom: 15px; }
+    #contact-us .contact-container .contact-wrapper {
+      margin-top: 100px;
+      background: #ffffff61;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 20px;
+      border: 1px solid #4c4c4c24;
+      padding: 10px; }
+    #contact-us .contact-container .col-1 {
+      padding: 40px;
+      margin: 30px 0; }
+      #contact-us .contact-container .col-1 .inner-box {
+        text-align: center; }
+        #contact-us .contact-container .col-1 .inner-box h2 {
+          color: #3b5998; }
+        #contact-us .contact-container .col-1 .inner-box i {
+          display: block;
+          font-size: 3rem;
+          color: #3b5998;
+          text-align: center; }
+        #contact-us .contact-container .col-1 .inner-box h3 {
+          font-weight: bold;
+          color: #4c4c4c;
+          padding: 20px 0;
+          text-transform: uppercase; }
+        #contact-us .contact-container .col-1 .inner-box img {
+          margin: 0 auto;
+          display: block;
+          max-width: 200px;
+          height: auto;
+          opacity: .09;
+          border-radius: 100%;
+          padding-bottom: 30px; }
+      #contact-us .contact-container .col-1 .details {
+        display: flex;
+        justify-content: space-between;
+        color: #4c4c4c; }
+        #contact-us .contact-container .col-1 .details span {
+          color: #3b5998;
+          font-weight: bold;
+          font-size: 1.7rem; }
+        #contact-us .contact-container .col-1 .details h3 {
+          padding: 6px 0;
+          font-weight: bold; }
+    #contact-us .contact-container .col-2 {
+      font-family: 'Montserrat', sans-serif;
+      padding: 40px;
+      border-left: 1px solid #4c4c4c1c; }
+      #contact-us .contact-container .col-2 h2 {
+        font-family: 'Open Sans', sans-serif;
+        color: #2B8383;
+        text-align: center;
+        margin: 30px 0;
+        font-weight: bold; }
+      #contact-us .contact-container .col-2 .form {
+        color: #3b5998;
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: 100%; }
+        #contact-us .contact-container .col-2 .form label {
+          padding: 5px 0;
+          font-weight: 300;
+          color: #4c4c4c; }
+        #contact-us .contact-container .col-2 .form input, #contact-us .contact-container .col-2 .form select {
+          background-color: #fff0;
+          height: 40px;
+          border-bottom: 1px solid #3b59982b;
+          border-top: inherit;
+          border-left: inherit;
+          border-right: inherit;
+          margin-bottom: 20px;
+          font-size: 1.3rem;
+          padding-bottom: 4px;
+          color: #2B8383;
+          font-weight: 100;
+          outline: none;
+          padding: 3px; }
