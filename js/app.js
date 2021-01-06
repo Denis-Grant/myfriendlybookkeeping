@@ -14,6 +14,8 @@ const description = document.querySelectorAll('.box .description');
 const gridHeaders = document.querySelector('.about-grid');
 const aboutParas = document.querySelectorAll('.about-grid p');
 
+const aboutPages = document.querySelector('.pages');
+
 function removeFlex(){
     console.log('IN')
     description.forEach((item)=>{
@@ -40,7 +42,8 @@ gridContainer.addEventListener(('click'), (e)=>{
     }
     if (e.target.className === 'more-btn-02'){
         // removeFlex();
-        moreBtn02.innerHTML === 'More' ? moreBtn02.innerHTML = 'Less' :
+        moreBtn02.innerHTML === 'More' ? 
+        (moreBtn02.innerHTML = 'Less', topLink()) :
             moreBtn02.innerHTML = 'More';
     para02.classList.toggle('hide');
     excerpt02.innerHTML.length > 1 ? excerpt02.innerHTML = "" :
@@ -48,7 +51,8 @@ gridContainer.addEventListener(('click'), (e)=>{
     }
     if (e.target.className === 'more-btn-03'){
         // removeFlex();
-        moreBtn03.innerHTML === 'More' ? moreBtn03.innerHTML = 'Less' :
+        moreBtn03.innerHTML === 'More' ? 
+        (moreBtn03.innerHTML = 'Less', topLink()) :
             moreBtn03.innerHTML = 'More';
     para03.classList.toggle('hide');
     excerpt03.innerHTML.length > 1 ? excerpt03.innerHTML = "" :
@@ -63,27 +67,34 @@ function clearAll(){
     });
 
     for (let i = 0; i < 4 ; i++){
-        gridHeaders.children[i].classList.remove('active')
+        gridHeaders.children[i].classList.remove('active');
+    }
+    for (let i = 0; i < aboutPages.childElementCount; i++){
+        aboutPages.children[i].classList.remove('highlight')
     }
 
 }
 gridHeaders.addEventListener('click',(e)=>{
     
-    console.log(e.target.id)
     if (e.target.id === 'h-1'){
         clearAll();
         aboutParas[0].classList.remove('hidden');
         gridHeaders.children[0].classList.add('active');
+        aboutPages.children[0].classList.add('highlight');
     }
     if (e.target.id === 'h-2'){
         clearAll();
         aboutParas[1].classList.remove('hidden');
         gridHeaders.children[1].classList.add('active');
+        aboutPages.children[1].classList.add('highlight');
+
     }
     if (e.target.id === 'h-3'){
         clearAll();
         aboutParas[2].classList.remove('hidden');
         gridHeaders.children[2].classList.add('active');
+        aboutPages.children[2].classList.add('highlight');
+
     }
     if (e.target.id === 'h-4'){
         clearAll();

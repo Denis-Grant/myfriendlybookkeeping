@@ -8,6 +8,10 @@
     box-sizing: border-box;
     // border: 1px dotted salmon;
 } 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: $white;
@@ -16,6 +20,10 @@ body {
         margin: 0 auto;
         width: 90%; 
     } 
+    .container-80 {
+        width: 80%;
+        margin: 0 auto;
+    }
     ul {
         list-style: none;
     }
@@ -57,6 +65,20 @@ body {
         opacity: 0;
         transition: opacity 200ms ease-in-out;
     }
+    .highlight {
+        color: #ffcc00;
+        transition: color 300ms ease-in-out;
+    }
+    // #home-nav {
+    //     position: fixed;
+    //     right: 5px;
+    //     bottom: 5px;
+    //     z-index: 20px;
+
+    //     i {
+    //         font-size: 50px;
+    //     }
+    // }
 }
 //HEADER
 header {
@@ -673,7 +695,14 @@ header {
                 display: inline;
             }
         }
-        
+        .pages {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffcc0059;
+            & * {
+                padding: 0 3px;
+            }
+        }
     }
     .speech {
         text-align: center;
@@ -765,7 +794,7 @@ header {
                           }
                       }
                       i {
-                          margin-top: 80px;
+                          margin-top: 60px;
                           display: block;
                           font-size: 3rem;
                           color:$blue;
@@ -782,9 +811,8 @@ header {
                      
                   }
                   .details {
-                      margin-top: 80px;
+                      margin-top: 60px;
                       text-align: center;
-                      // justify-content: space-between;
                       color: $black;
   
                       span {
@@ -796,6 +824,10 @@ header {
                       h3 {
                           padding: 6px 0 ;
                           font-weight: bold;
+                          .emailAdd {
+                              font-size: 18px;
+                              letter-spacing: 1px;
+                          }
                       }
                   }
           }
@@ -877,9 +909,47 @@ footer {
     color: $white;
     margin-top: -10px;
     background-color: $green;
+    padding: 10px;
     img {
-        max-width: 190px;
+        max-width: 80px;
         height: auto;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 20% 50% 30%;
+        justify-content: start;
+        h3 {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #00CFCF;
+            // border-bottom: 5px solid $turquoise;
+        }
+        .explore * {
+            padding: 2px 0;
+            font-size: .9rem;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+        }
+       .locations {
+            display: grid;
+
+            grid-template-columns: repeat(6, 1fr);
+            & * {
+                padding-right: 5px;
+                font-size: .9rem;
+                font-weight: 300;
+                font-family: 'Montserrat', sans-serif;
+            }
+       }
+       .share {
+           display: flex;
+           font-size: 2rem;
+
+           li * {
+               padding-right: 8px;
+           }
+
+       }
     }
 }
 
