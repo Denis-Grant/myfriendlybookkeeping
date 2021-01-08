@@ -10,7 +10,7 @@
 } 
 html {
     scroll-behavior: smooth;
-
+    overflow-x: hidden;
 }
 
 body {
@@ -83,8 +83,10 @@ body {
 }
 //HEADER
 header {
+    // display: none;
     clip-path: polygon(0% 0%,100% 0%, 100% 85%, 50% 100%,0% 85%, 0% 0);
     // clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    // height: auto;
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.0)),url('../img/hero.jpg') no-repeat;
     // background: linear-gradient(rgba(57, 134, 57, 0.3), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
@@ -406,20 +408,15 @@ header {
 
 // SERVICES
 #services {
-    // position: relative;
-    height: 100vh;
+    height: auto;
     // clip-path: polygon(0 0,100% 0, 100% 90%, 0 100%, 0 0);
     background-color: #fff;
-    // overflow: hidden;
-    // z-index: 10;
-    // background: linear-gradient(to right top, #3b5998, #3b5998c2, #3b59988a, white),url(../img/calculator.jpg) no-repeat;
     .container {
         position: relative;
         z-index: 20;
     } 
     .services-header {
         margin: 0 auto;
-        width: 500px;
         text-align: center;
         h5 {
             font-size: 0.975rem;
@@ -447,6 +444,8 @@ header {
         }
     }
     .grid-container {
+        // overflow: hidden;
+
         width: 90%;
         margin: 0 auto;
         margin-top: 130px;
@@ -454,14 +453,15 @@ header {
             // border: 1px dotted salmon;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            justify-content: center;
             gap: 10px;
             justify-content: center;
+
 
             .box {
                 // border: 1px dotted salmon;
                 display: flex;
                 align-items: center;
+                justify-content: start;
                 margin-bottom: 40px;
                 .text {
                     color: $black;
@@ -486,7 +486,7 @@ header {
                     padding-bottom: 3px;
                 }
             .span-1 {
-                
+                grid-column: 2 / span 1;
             }
             }
 
@@ -494,6 +494,7 @@ header {
         .wrench {
             text-align: center;
             padding-top: 120px;
+            margin-bottom: 50px;
             // border-bottom: 4px solid $green;
             i {
                 font-size: 300%;
@@ -597,7 +598,7 @@ header {
 // }
 #testimonials {
     margin-top: -100px;
-    height: 100vh;
+    height: auto;
     background-color: $green;
     clip-path:polygon(0 0, 100% 10%,100% 100%, 0 100%, 0 0);
 
@@ -634,9 +635,11 @@ header {
     .quotes-grid {
         display: grid;
         margin-top: 110px;
+        margin-bottom: 50px;
+        // padding-bottom: 50px;
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-around;
-        gap: 30px 310px;
+        gap: 30px 210px;
 
         .box {
 
@@ -646,6 +649,9 @@ header {
             border-radius: 10px 10px 30px 10px;
             font-weight: 300;
             box-shadow: 7px 6px 13px 0px rgba(59,89,152,0.75);                
+            &:hover {
+                background-color: lighten($blue, 5%);
+            }
             // font-size: 1.250rem;
             }
             .details {
@@ -670,6 +676,7 @@ header {
         padding-top: 120px;
         // border-bottom: 4px solid $green;
         i {
+            display: block;
             font-size: 300%;
             color: $white;
         }
@@ -677,7 +684,8 @@ header {
 }
 
 #about-us {
-    height: 80vh;
+    padding-top: 50px;
+    height: auto;
     background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('../img/london.jpg') no-repeat;
     // linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.5)),
     border-bottom: 15px solid $blue;
@@ -784,6 +792,8 @@ header {
 }
 
 #contact-us {
+    
+    // display: none;
         // background: url(../img/bg-white-img.jpg) no-repeat;
         .contact-container {
             width: 60%;
@@ -791,7 +801,6 @@ header {
           .contact-header {
               padding-top: 20px;
               margin: 0 auto;
-              width: 500px;
               text-align: center;
               h5 {
                   font-size: 0.975rem;
@@ -820,6 +829,7 @@ header {
               }
           }
           .contact-wrapper {
+  
             box-shadow: 5px 11px 14px -1px rgba(138,138,138,0.35);             
               margin-top: 100px;
             //   background: #fff;
@@ -900,6 +910,7 @@ header {
                   }
           }
           .col-2 {
+            overflow: hidden;
               font-family: 'Montserrat', sans-serif;
               padding: 40px;
               border-left: 1px solid #4c4c4c1c;
@@ -975,6 +986,7 @@ header {
 }
 
 footer {
+    
     color: $white;
     margin-top: -10px;
     background-color: $green;
@@ -985,7 +997,8 @@ footer {
     }
     .footer-grid {
         display: grid;
-        grid-template-columns: 20% 50% 30%;
+        grid-template-columns: 1fr 2fr 2fr;
+        gap: 8px;
         justify-content: start;
         h3 {
             display: inline-block;
@@ -1011,6 +1024,7 @@ footer {
             }
        }
        .share {
+
            display: flex;
            font-size: 2rem;
 
@@ -1033,6 +1047,9 @@ footer {
     header #cta {
         height: 640px;
     }
+    #testimonials .quotes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media(max-width: 1360px){
     header {
@@ -1044,6 +1061,26 @@ footer {
     #what-we-do .grid-container .grid .box .description p {
         font-size: 16px;
         line-height: 22px;
+    }
+    #services .grid-container {
+       margin-top: 60px;
+       .wrench {
+           padding-top: 0;
+       }
+    }
+    #services .grid-container .services-grid {
+        margin-bottom: 100px;
+        grid-template-columns: repeat(3, 1fr);
+        // margin: 0 auto;
+        .box {
+            max-width: 300px;
+            // &:nth-child(even) {
+            //     justify-self: flex-end;
+            // }
+        }
+    }
+    #contact-us .contact-container .contact-wrapper  {           // grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 }
 @media(max-width: 1210px){
@@ -1059,6 +1096,7 @@ footer {
     header #cta .cta-wrapper button a {
         padding: 8px 12px;
     }
+
     
 }
 @media(max-width: 1020px){
@@ -1081,9 +1119,16 @@ footer {
     }
     #what-we-do .grid-container .grid {
         grid-template-columns: 1fr;
-        // justify-content: center;
-
     }
+    #what-we-do .grid-container .grid .box {
+        margin: 0 auto;
+    }
+    #testimonials .speech {
+        padding-top: 70px;
+    }
+
+ 
+}
     @media(max-width: 870px){
         header nav .navbar-wrapper .navbar .menu {
             display: none;
@@ -1097,11 +1142,97 @@ footer {
         header nav .navbar-wrapper .navbar {
             justify-content: center;
         }
+        #services .grid-container .services-grid {
+            // margin-bottom: 100px;
+            grid-template-columns: repeat(2, 1fr);
+            // margin: 0 auto;
+            .box {
+                max-width: 300px;
+                // &:nth-child(even) {
+                //     justify-self: flex-end;
+                // }
+                .text h5 {
+                    font-size: 14px;
+                }
+            }
+        }
+        #services .grid-container .services-grid .box .text {
+            // font-size: 60px;
+        }
+        #testimonials .speech {
+            padding-top: 0;
+        }
+
+        #about-us .container-grid .about-grid {
+            grid-template-columns: 1fr;
 
         }
+        #contact-us .contact-container .contact-wrapper {            
+            display: block;
+            margin: 0 auto;
+        }
+        #contact-us .contact-container .col-1 .details h3 .emailAdd {
+            font-size: 0px;
+        }
+
+        footer .footer-grid {
+            grid-template-columns: 1fr;
+
+            // .col-2 {
+            //     max-width: 300px;
+            // }
+        }
+   
     }
+    @media(max-width: 725px){
+        #testimonials .quotes-grid {
+            
+            grid-template-columns: 1fr;
+            gap: 50px;
+            .span-1 {
+                grid-column:inherit;
+            }
+        }
+        #testimonials .speech {
+            padding-top: 0;
+        }
+        #contact-us .contact-container .contact-header   {          // width: 0 auto;
+            margin: 10px 0;
+        }
+    }
+
     @media(max-width: 560px){
        header {
-        background-position: 36% 90%
+        background-position: 36% 90%;
        }
+       #services .services-header {
+        margin-bottom: 50px;
+       }
+       #services .grid-container {
+           margin: 0 auto;
+        //    justify-content: center;
+           width: 100%;
+       }
+       #services .grid-container .services-grid {
+        // grid-template-columns: 1fr ;
+        text-align: center;
+        // display: ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   
+        // justify-content: center;
+        margin-bottom: 4px;
+        .box {
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+            // width: 100%;
+            i.green, i.blue {
+                font-size: 30px;
+              
+            }
+        }
+       }
+       
 }

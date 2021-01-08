@@ -6,7 +6,8 @@
   box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -226,14 +227,13 @@ header {
             font-weight: 400; }
 
 #services {
-  height: 100vh;
+  height: auto;
   background-color: #fff; }
   #services .container {
     position: relative;
     z-index: 20; }
   #services .services-header {
     margin: 0 auto;
-    width: 500px;
     text-align: center; }
     #services .services-header h5 {
       font-size: 0.975rem;
@@ -260,12 +260,12 @@ header {
     #services .grid-container .services-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      justify-content: center;
       gap: 10px;
       justify-content: center; }
       #services .grid-container .services-grid .box {
         display: flex;
         align-items: center;
+        justify-content: start;
         margin-bottom: 40px; }
         #services .grid-container .services-grid .box .text {
           color: #4c4c4c; }
@@ -284,9 +284,12 @@ header {
           font-weight: bold;
           text-transform: uppercase;
           padding-bottom: 3px; }
+        #services .grid-container .services-grid .box .span-1 {
+          grid-column: 2 / span 1; }
     #services .grid-container .wrench {
       text-align: center;
-      padding-top: 120px; }
+      padding-top: 120px;
+      margin-bottom: 50px; }
       #services .grid-container .wrench i {
         font-size: 300%;
         color: #3b5998; }
@@ -309,7 +312,7 @@ header {
 
 #testimonials {
   margin-top: -100px;
-  height: 100vh;
+  height: auto;
   background-color: #2B8383;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%, 0 0); }
   #testimonials .testimonial-header {
@@ -338,9 +341,10 @@ header {
   #testimonials .quotes-grid {
     display: grid;
     margin-top: 110px;
+    margin-bottom: 50px;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
-    gap: 30px 310px; }
+    gap: 30px 210px; }
     #testimonials .quotes-grid .box {
       padding: 15px;
       background-color: #3b5998;
@@ -348,6 +352,8 @@ header {
       border-radius: 10px 10px 30px 10px;
       font-weight: 300;
       box-shadow: 7px 6px 13px 0px rgba(59, 89, 152, 0.75); }
+      #testimonials .quotes-grid .box:hover {
+        background-color: #4264aa; }
     #testimonials .quotes-grid .details {
       padding-top: 8px;
       margin-top: 8px;
@@ -363,11 +369,13 @@ header {
     text-align: center;
     padding-top: 120px; }
     #testimonials .speech i {
+      display: block;
       font-size: 300%;
       color: #f9f9f9; }
 
 #about-us {
-  height: 80vh;
+  padding-top: 50px;
+  height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/london.jpg") no-repeat;
   border-bottom: 15px solid #3b5998;
   background-size: cover;
@@ -448,7 +456,6 @@ header {
   #contact-us .contact-container .contact-header {
     padding-top: 20px;
     margin: 0 auto;
-    width: 500px;
     text-align: center; }
     #contact-us .contact-container .contact-header h5 {
       font-size: 0.975rem;
@@ -523,6 +530,7 @@ header {
           font-size: 18px;
           letter-spacing: 1px; }
   #contact-us .contact-container .col-2 {
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     padding: 40px;
     border-left: 1px solid #4c4c4c1c; }
@@ -592,7 +600,8 @@ footer {
     height: auto; }
   footer .footer-grid {
     display: grid;
-    grid-template-columns: 20% 50% 30%;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 8px;
     justify-content: start; }
     footer .footer-grid h3 {
       display: inline-block;
@@ -621,7 +630,9 @@ footer {
   header #cta .cta-wrapper {
     line-height: 4.3rem; }
   header #cta {
-    height: 640px; } }
+    height: 640px; }
+  #testimonials .quotes-grid {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (max-width: 1360px) {
   header {
@@ -630,7 +641,18 @@ footer {
     height: 420px; }
   #what-we-do .grid-container .grid .box .description p {
     font-size: 16px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  #services .grid-container {
+    margin-top: 60px; }
+    #services .grid-container .wrench {
+      padding-top: 0; }
+  #services .grid-container .services-grid {
+    margin-bottom: 100px;
+    grid-template-columns: repeat(3, 1fr); }
+    #services .grid-container .services-grid .box {
+      max-width: 300px; }
+  #contact-us .contact-container .contact-wrapper {
+    grid-template-columns: 1fr; } }
 
 @media (max-width: 1210px) {
   header {
@@ -654,9 +676,13 @@ footer {
   header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-lg {
     max-width: 210px; }
   #what-we-do .grid-container .grid {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #what-we-do .grid-container .grid .box {
+    margin: 0 auto; }
+  #testimonials .speech {
+    padding-top: 70px; } }
 
-@media (max-width: 1020px) and (max-width: 870px) {
+@media (max-width: 870px) {
   header nav .navbar-wrapper .navbar .menu {
     display: none; }
   header nav .navbar-wrapper .appointments {
@@ -664,8 +690,53 @@ footer {
   header nav .navbar-wrapper .mobile-menu .dropdown {
     display: block; }
   header nav .navbar-wrapper .navbar {
-    justify-content: center; } }
+    justify-content: center; }
+  #services .grid-container .services-grid {
+    grid-template-columns: repeat(2, 1fr); }
+    #services .grid-container .services-grid .box {
+      max-width: 300px; }
+      #services .grid-container .services-grid .box .text h5 {
+        font-size: 14px; }
+  #testimonials .speech {
+    padding-top: 0; }
+  #about-us .container-grid .about-grid {
+    grid-template-columns: 1fr; }
+  #contact-us .contact-container .contact-wrapper {
+    display: block;
+    margin: 0 auto; }
+  #contact-us .contact-container .col-1 .details h3 .emailAdd {
+    font-size: 0px; }
+  footer .footer-grid {
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 725px) {
+  #testimonials .quotes-grid {
+    grid-template-columns: 1fr;
+    gap: 50px; }
+    #testimonials .quotes-grid .span-1 {
+      grid-column: inherit; }
+  #testimonials .speech {
+    padding-top: 0; }
+  #contact-us .contact-container .contact-header {
+    margin: 10px 0; } }
 
 @media (max-width: 560px) {
   header {
-    background-position: 36% 90%; } }
+    background-position: 36% 90%; }
+  #services .services-header {
+    margin-bottom: 50px; }
+  #services .grid-container {
+    margin: 0 auto;
+    width: 100%; }
+  #services .grid-container .services-grid {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4px; }
+    #services .grid-container .services-grid .box {
+      text-align: center;
+      display: block;
+      margin-bottom: 10px; }
+      #services .grid-container .services-grid .box i.green, #services .grid-container .services-grid .box i.blue {
+        font-size: 30px; } }
