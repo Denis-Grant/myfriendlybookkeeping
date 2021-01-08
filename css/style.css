@@ -67,17 +67,20 @@ header {
         header nav .navbar-wrapper .navbar .brand .brand-wrapper {
           display: flex;
           align-items: center;
-          width: 100%;
           min-width: 200px;
-          height: 100%;
           padding: 1rem 0; }
           header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-sm {
-            width: 45px;
+            max-width: 35px;
+            height: auto;
+            padding-right: 1px; }
+          header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-lg {
+            max-width: 250px;
             height: auto;
             padding-right: 1px; }
         header nav .navbar-wrapper .navbar .menu {
           display: flex;
-          align-items: center; }
+          align-items: center;
+          font-size: 16px; }
           header nav .navbar-wrapper .navbar .menu li {
             padding: 5px 10px; }
             header nav .navbar-wrapper .navbar .menu li a {
@@ -90,12 +93,6 @@ header {
                 border-bottom: 5px solid #00CFCF; }
               header nav .navbar-wrapper .navbar .menu li a:hover {
                 border-bottom: 5px solid #00FFFF; }
-        @media screen and (max-width: 1210px) {
-          header nav .navbar-wrapper .navbar {
-            font-size: .8rem; } }
-  @media screen and (max-width: 1210px) and (max-width: 920px) {
-    header nav .navbar-wrapper .navbar img {
-      width: 80%; } }
       header nav .navbar-wrapper .appointments {
         display: flex;
         flex-direction: column;
@@ -113,12 +110,19 @@ header {
           header nav .navbar-wrapper .appointments button a {
             padding: 5px 10px;
             display: block; }
+      header nav .navbar-wrapper .mobile-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        header nav .navbar-wrapper .mobile-menu .dropdown {
+          color: #fff;
+          font-size: 40px;
+          display: none; }
   header #cta {
     display: flex;
     height: calc(65vh - 103px);
     align-items: center; }
     header #cta .cta-wrapper {
-      position: relative;
       font-size: 2rem;
       color: #f9f9f9;
       font-weight: 800;
@@ -128,7 +132,6 @@ header {
       header #cta .cta-wrapper span {
         color: #00CFCF; }
       header #cta .cta-wrapper button {
-        margin-left: 66%;
         min-width: 202px;
         display: block;
         background-color: rgba(255, 255, 255, 0);
@@ -440,7 +443,7 @@ header {
       color: #f9f9f9; }
 
 #contact-us .contact-container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto; }
   #contact-us .contact-container .contact-header {
     padding-top: 20px;
@@ -613,3 +616,56 @@ footer {
       font-size: 2rem; }
       footer .footer-grid .share li * {
         padding-right: 8px; }
+
+@media (max-width: 1650px) {
+  header #cta .cta-wrapper {
+    line-height: 4.3rem; }
+  header #cta {
+    height: 640px; } }
+
+@media (max-width: 1360px) {
+  header {
+    height: 72vh; }
+  header #cta {
+    height: 420px; }
+  #what-we-do .grid-container .grid .box .description p {
+    font-size: 16px;
+    line-height: 22px; } }
+
+@media (max-width: 1210px) {
+  header {
+    height: 65vh; }
+  header #cta {
+    height: 340px; }
+  header #cta .cta-wrapper {
+    font-size: 28px; }
+  header #cta .cta-wrapper button a {
+    padding: 8px 12px; } }
+
+@media (max-width: 1020px) {
+  header #cta {
+    justify-content: center; }
+  header #cta .cta-wrapper {
+    text-align: center; }
+  header #cta .cta-wrapper button {
+    margin: 0 auto; }
+  header nav .navbar-wrapper .navbar .menu li a {
+    font-size: 12px; }
+  header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-lg {
+    max-width: 210px; }
+  #what-we-do .grid-container .grid {
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 1020px) and (max-width: 870px) {
+  header nav .navbar-wrapper .navbar .menu {
+    display: none; }
+  header nav .navbar-wrapper .appointments {
+    display: none; }
+  header nav .navbar-wrapper .mobile-menu .dropdown {
+    display: block; }
+  header nav .navbar-wrapper .navbar {
+    justify-content: center; } }
+
+@media (max-width: 560px) {
+  header {
+    background-position: 36% 90%; } }

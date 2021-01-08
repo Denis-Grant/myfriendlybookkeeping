@@ -6,10 +6,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // border: 1px dotted salmon;
+    // border: 1px dotted rgba(14, 4, 3, 0.412);
 } 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -89,38 +90,65 @@ header {
     // background: linear-gradient(rgba(57, 134, 57, 0.3), rgba(0, 0, 0, 0.1)), url("../img/hero.jpg") no-repeat;
     background-size: cover;
     background-position: 50% 90%;
-
+    // @media(max-width: 600px){
+    //     height: 70vh;
+    // }
     nav {
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             .navbar-wrapper {
                 display: grid;
                 grid-template-columns: 85% 15%;
                 gap: 2px;
+                // @media (max-width: 600px){
+                // }
                 .navbar {
                     display: flex;
                     justify-content: space-between ;
                     border-right: 1px solid rgba(255, 255, 255, 0.3);
                     padding-right: 10px;
+                    // @media(max-width: 600px){
+                    //     justify-content: center;
+                    // }
+                    
                     .brand {
+
                         .brand-wrapper {
                             display: flex;
                             align-items: center;
-                            width: 100%;
                             min-width: 200px;
-                            height: 100%;
+                            
+
                             padding: 1rem 0;
+                           
                             .logo-sm {
-                                width:45px;
+                                max-width:35px;
                                 height: auto;
                                 padding-right: 1px;
+                                @media (max-width: 600){
+                                    
+                                }
                                 // height: 100%;
                             }
+                            .logo-lg {
+                                max-width:250px;
+                                height: auto;
+                                padding-right: 1px;
+                                // @media (max-width: 600px){
+                                //     max-width: 125px;
+                                // }
+                            }
+                           
+                            
                         }
+                        // @media(max-width: 600px){
+                        //     max-width: 100px;
+                        // }
                        
                     }
                     .menu {
                         display: flex;
                         align-items: center;
+                        font-size: 16px;
                         li {
                             padding: 5px 10px;
                             a {
@@ -139,17 +167,22 @@ header {
                                 }
                             }
                         }
+                        // @media (max-width: 600px){
+                            
+                        //     display: none;
+                        // }
                     }
         
                     
-                    @media screen and (max-width: 1210px){
-                        font-size: .8rem;
-                        img {
-                            @media screen and (max-width: 920px){
-                                width: 80%
-                            }
-                        }
-                    }
+                    // @media screen and (max-width: 1210px){
+                    //     font-size: .8rem;
+                    //     img {
+                    //         @media screen and (max-width: 920px){
+                    //             width: 80%
+                    //         }
+                    //     }
+                    // }
+                    
                 }
                 .appointments {
                     display: flex;
@@ -176,7 +209,18 @@ header {
                         }
                    
                 }
-            
+               
+            }
+            .mobile-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // padding-left: 20px;
+                .dropdown {
+                    color: #fff;
+                    font-size: 40px;
+                    display: none;
+                }
             }
         }
     }
@@ -184,14 +228,23 @@ header {
         display: flex;
         height: calc(65vh - 103px);
         align-items: center;
-        // border: 1px solid pink;
+        // @media (max-width: 600px){
+            // justify-content: center;
+        // }
 
         .cta-wrapper {
-            position: relative;
+            // position: relative;
             font-size: 2rem;
             color: $white;
             font-weight: 800;
             line-height: 5.3rem;
+            // @media (max-width: 600px){
+            //     font-size: 16px;
+            //     line-height: 40px;
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            // }
             span.green {
                 color: $green;
             }
@@ -201,15 +254,14 @@ header {
             }
 
             button {
-                margin-left: 66%;
+                // margin-left: 66%;
                 min-width: 202px;
                 display: block;
                 background-color: rgba(255, 255, 255, 0);
                 border: 2px solid #fff;
                 border-radius: 30px;
                 transition: background-color 500ms ease-in-out;
-
-
+                
                 a {
                     display: block;
                     font-size: 1.1rem;
@@ -226,7 +278,23 @@ header {
                         border-color: $white;
                         color: #009595;
                     }
+                    // @media (max-width: 600px){
+                    //     margin: auto;
+                    //     font-size: 12px;
+                    //     padding: 0 0 ;
+                        
+                    // }
                 }
+                // @media (max-width: 600px){
+                    
+                //    margin: 0;
+                //     min-width:100px;
+                //     font-size: 12px;
+                //     padding: 4px 6px ;
+                    
+                // }
+                
+ 
                 
             }
                      
@@ -718,7 +786,7 @@ header {
 #contact-us {
         // background: url(../img/bg-white-img.jpg) no-repeat;
         .contact-container {
-            width: 80%;
+            width: 60%;
             margin: 0 auto;
           .contact-header {
               padding-top: 20px;
@@ -887,7 +955,7 @@ header {
                   }
                   button {
                       cursor: pointer;
-                      font-weight: 100;
+                      font-weight: 100; 
                       padding: 10px;
                       background-color: $green;
                       transition: background-color 300ms ease-in-out;
@@ -896,6 +964,7 @@ header {
                       border: none;
                       margin: 15px 0;
                       border-radius: 4px;
+                    //   box-shadow: 10px 12px 22px -8px rgba(35,113,111,0.51);
                       &:hover {
                           background-color: darken($green, 5%);
                       }
@@ -955,4 +1024,84 @@ footer {
 
 * {
     // border: 1px dotted salmon;
+}
+
+@media(max-width: 1650px){
+    header #cta .cta-wrapper {
+        line-height: 4.3rem;
+    }
+    header #cta {
+        height: 640px;
+    }
+}
+@media(max-width: 1360px){
+    header {
+        height: 72vh;
+    }
+    header #cta {
+        height: 420px;
+    }
+    #what-we-do .grid-container .grid .box .description p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media(max-width: 1210px){
+    header {
+        height: 65vh;
+    }
+    header #cta {
+        height: 340px;
+    }
+    header #cta .cta-wrapper {
+        font-size: 28px;
+    }
+    header #cta .cta-wrapper button a {
+        padding: 8px 12px;
+    }
+    
+}
+@media(max-width: 1020px){
+    header #cta {
+        justify-content: center;
+    }
+    
+    header #cta .cta-wrapper {
+        text-align: center;
+    }
+    header #cta .cta-wrapper button {
+        margin: 0 auto;
+    }
+    header nav .navbar-wrapper .navbar .menu li a {
+        font-size: 12px;
+    }
+    header nav .navbar-wrapper .navbar .brand .brand-wrapper .logo-lg {
+    
+        max-width: 210px;
+    }
+    #what-we-do .grid-container .grid {
+        grid-template-columns: 1fr;
+        // justify-content: center;
+
+    }
+    @media(max-width: 870px){
+        header nav .navbar-wrapper .navbar .menu {
+            display: none;
+        }
+        header nav .navbar-wrapper .appointments {
+            display: none;
+        }
+        header nav .navbar-wrapper .mobile-menu .dropdown {
+            display: block;
+        }
+        header nav .navbar-wrapper .navbar {
+            justify-content: center;
+        }
+
+        }
+    }
+    @media(max-width: 560px){
+       header {
+        background-position: 36% 90%
+       }
 }
